@@ -2,5 +2,6 @@
 	"token": "token",
 	"prefix": "c!",
 	"owner": "id",
+	"logChannel": "channel-id",
 	"opts": {"mentionEveryone": false, "fetchAllMembers": true, "sync": true}
 }

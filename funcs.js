@@ -12,8 +12,6 @@ module.exports = (bot) => {
 			return 3;
         if (msg.author.id == '392436381806493696') // and mod team jace himself
 			return 2;
-		if (msg.author.roles.cache.some(role => role.name === 'Cerberus Access')) //cerberus role
-			return 2;
 		else
 			return 1;
 	}
