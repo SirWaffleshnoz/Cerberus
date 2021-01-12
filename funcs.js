@@ -9,9 +9,11 @@ module.exports = (bot) => {
 
 	bot.permLevel = function (msg) {
 		if (msg.author.id == bot.config.owner)
+			return 3;
+        if (msg.author.id == '392436381806493696') // and mod team jace himself
 			return 2;
-        if (msg.author.id == '392436381806493696') //jace himself
-            return 2;
+		if (msg.author.roles.cache.some(role => role.name === 'Cerberus Access')) //cerberus role
+			return 2;
 		else
 			return 1;
 	}
@@ -81,6 +83,8 @@ module.exports = (bot) => {
 	//list
 	bot.setupList = function () {
 		bot.db = require('./db.json');
+		console.log("[LIST] | List database found!")
+
 
 		writeList();
 
@@ -97,6 +101,8 @@ module.exports = (bot) => {
 			console.log("[LIST] | List database successfully saved to file!")
 			return "List database successfully saved to file!";
 		}
+		console.log("[LIST] | List database initialized!")
+
 	}
 
 	/**
