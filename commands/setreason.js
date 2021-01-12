@@ -35,13 +35,13 @@ module.exports = {
                             .addField('Reason:', reason)
                             .setFooter(msg.guild.name, msg.guild.iconURL());
                         msg.channel.send(ui);
-                        log.send(`${target.username}#${target.discriminator} (${target.id}) had their NST list reason edited by ${msg.author.toString()}`)
+                        log.send(`**${target.username}#${target.discriminator} (${target.id})** had their National Security Threat list reason edited by ${msg.author.toString()}.`)
                         log.send(ui);
                     } else if (!reason) {
                         msg.reply("clearing reason...");
                         bot.db[target.id].reason = null;
                         msg.reply("cleared reason!");
-                        log.send(`${target.username}#${target.discriminator} (${target.id}) had their NST list reason cleared by ${msg.author.toString()}`)
+                        log.send(`**${target.username}#${target.discriminator} (${target.id})** had their National Security Threat list reason cleared by ${msg.author.toString()}.`)
                         log.send(ui);
                     }
                 } else {

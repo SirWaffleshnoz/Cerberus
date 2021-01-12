@@ -53,7 +53,7 @@ module.exports = {
                                     .addField('Reason:', reason)
                                     .setFooter(msg.guild.name, msg.guild.iconURL());
                                 msg.channel.send(ui);
-                                log.send(`${target.username}#${target.discriminator} (${target.id}) was added to the NST list by ${msg.author.toString()}`)
+                                log.send(`**${target.username}#${target.discriminator} (${target.id})** was added to the National Security Threat list by ${msg.author.toString()}.`)
                                 log.send(ui);
                             })
                             .catch(() => {
@@ -82,7 +82,7 @@ module.exports = {
                                     .addField('Reason:', reason)
                                     .setFooter(msg.guild.name, msg.guild.iconURL());
                                 msg.channel.send(ui);
-                                log.send(`${target.username}#${target.discriminator} (${target.id}) was added to the NST list by ${msg.author.toString()}`)
+                                log.send(`**${target.username}#${target.discriminator} (${target.id})** was added to the National Security Threat list by ${msg.author.toString()}.`)
                                 log.send(ui);
                             });
                     });
@@ -106,7 +106,7 @@ module.exports = {
                     }
 
                     msg.reply("user deleted! All done!");
-                    log.send(`${target.username}#${target.discriminator} (${target.id}) was removed from the NST list by ${msg.author.toString()}`)
+                    log.send(`**${target.username}#${target.discriminator} (${target.id})** was removed from the National Security Threat list by ${msg.author.toString()}.`)
                 } else {
                     msg.reply("mention someone! Usage: `c!list delete <@user>`");
                 }
